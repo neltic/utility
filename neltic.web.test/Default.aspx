@@ -10,7 +10,7 @@
     <script src="script/jquery.min.js"></script>
     <script src="script/jquery.ui.min.js"></script>
     <script src="<%=neltic.environ.Label.GetScriptPath() %>"></script>
-    <script src="script/tools.js"></script>
+    <script src="script/all.js"></script>
     <script type="text/javascript">
         $(function () {
             var service = "Default.aspx/";

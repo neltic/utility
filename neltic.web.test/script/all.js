@@ -402,3 +402,40 @@ function parseValueBy(typeOfProperty, val) {
     }
     return value;
 }
+/* old web service function */
+// extiendo jQuery para el manejo de webmethods :)
+jQuery.WebMethod = function (urlMethod, jsonData, callback) {
+    var xhr = null;
+    // no se incluyo data
+    if (typeof (jsonData) == "function") { callback = jsonData; jsonData = "{}"; }
+    // no se incluyo o no es valido el callback
+    if (typeof (callback) != "function") { callback = function (result) { }; }
+    // llamamos web method
+    if (continueMission) {
+        xhr = $.ajax({
+            type: "POST",
+            url: urlMethod,
+            data: jsonData,
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            async: true,
+            success: function (result) { callback(result.d); },
+            error: function (x, e, errorThrown) {
+                if (x.status == 0 && e != "abort") {
+                    alert("Al parecer aún no se cargaba información que se solicitó previamente, si la información ya no es requerida haga caso omiso de este mensaje.");
+                } else if (x.status == 404) {
+                    alert("Pagina no encontrada");
+                } else if (x.status == 500) {
+                    alert("Al parecer la red no esta disponible o responde muy lentamente, si el cambio no se ve reflejado intente actualizar manualmente pulsando F5.\n\nSi el problema persiste consulte con el administrador del sitio.\n\nInformación de referencia para el área de TI:\n" + urlMethod + "\n" + jsonData);
+                } else if (e == "parsererror") {
+                    alert("Error procesando la respuesta del servidor [JSON].");
+                } else if (e == "timeout") {
+                    alert("Tiempo de espera agotado");
+                } else if (e != "abort") {
+                    alert("La red se encuentra intermitente."); // se comento por que al asuario le "hace ruido" 
+                }
+            }
+        });
+        return xhr;
+    }
+}

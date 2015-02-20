@@ -60,6 +60,11 @@
     <Content Include="Default.aspx" />
     <Content Include="Global.asax" />
     <Content Include="label.html" />
+    <Content Include="script\alert.js" />
+    <Content Include="script\all.js" />
+    <Content Include="script\bootstrap.min.js" />
+    <Content Include="script\loader.js" />
+    <Content Include="script\membership.js" />
     <Content Include="script\model\ajaxresponse.js">
       <DependentUpon>entities.tt</DependentUpon>
     </Content>
@@ -74,7 +79,9 @@
     <Content Include="script\model\serviceresponse-bool.js">
       <DependentUpon>entities.tt</DependentUpon>
     </Content>
-    <Content Include="script\tools.js" />
+    <Content Include="script\service.response.js" />
+    <Content Include="script\tool.js" />
+    <Content Include="script\use.strict.txt" />
     <Content Include="source\label.xml" />
     <Content Include="script\jquery.min.js" />
     <Content Include="script\jquery.ui.min.js" />
@@ -123,6 +130,7 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>label.js</LastGenOutput>
     </Content>
+    <Content Include="script\all.bat" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
