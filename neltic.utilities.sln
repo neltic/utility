@@ -1,0 +1,44 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "neltic.web.test", "neltic.web.test\neltic.web.test.csproj", "{259E8ACA-8DFD-4939-B0D5-0448754B0E25}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "neltic.environ", "neltic.environ\neltic.environ.csproj", "{2ADE82C6-9F3E-4525-A996-4B1C91AA7B44}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "neltic.model", "neltic.model\neltic.model.csproj", "{F34383DF-E8DC-4C12-BCFC-AF1A791F0EB4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "neltic.app.builder", "neltic.app.builder\neltic.app.builder.csproj", "{C442EACB-668F-4F35-A0CC-1F9C82CD49F1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "neltic.utility", "neltic.utility\neltic.utility.csproj", "{757349A3-FF5C-444C-B479-490A59D92455}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{259E8ACA-8DFD-4939-B0D5-0448754B0E25}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{259E8ACA-8DFD-4939-B0D5-0448754B0E25}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{259E8ACA-8DFD-4939-B0D5-0448754B0E25}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{259E8ACA-8DFD-4939-B0D5-0448754B0E25}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2ADE82C6-9F3E-4525-A996-4B1C91AA7B44}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2ADE82C6-9F3E-4525-A996-4B1C91AA7B44}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2ADE82C6-9F3E-4525-A996-4B1C91AA7B44}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2ADE82C6-9F3E-4525-A996-4B1C91AA7B44}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F34383DF-E8DC-4C12-BCFC-AF1A791F0EB4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F34383DF-E8DC-4C12-BCFC-AF1A791F0EB4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F34383DF-E8DC-4C12-BCFC-AF1A791F0EB4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F34383DF-E8DC-4C12-BCFC-AF1A791F0EB4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C442EACB-668F-4F35-A0CC-1F9C82CD49F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C442EACB-668F-4F35-A0CC-1F9C82CD49F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C442EACB-668F-4F35-A0CC-1F9C82CD49F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C442EACB-668F-4F35-A0CC-1F9C82CD49F1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{757349A3-FF5C-444C-B479-490A59D92455}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{757349A3-FF5C-444C-B479-490A59D92455}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{757349A3-FF5C-444C-B479-490A59D92455}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{757349A3-FF5C-444C-B479-490A59D92455}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

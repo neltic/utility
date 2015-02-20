@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<label>
+  <add key="Create" value="Crear"/>
+  <add key="Go" value="Ir"/>
+  <add key="New" value="Nuevo"/>
+  <add key="Change" value="Cambiar"/>
+  <add key="Apply" value="Aplicar"/>
+  <add key="Next" value="Siguiente"/>
+  <add key="Import" value="Importar"/>
+  <add key="NotEditable" value="El registro no es editable"/>
+  <add key="ConfirmAction" value="¿Desea llevar acabo la acción?"/>
+  <add key="ConfirmClear" value="¿Desea limpiar todos los campos del formulario?"/>
+  <add key="PageNotFound" value="¡La pagina no se encuentra disponible!"/>
+</label>

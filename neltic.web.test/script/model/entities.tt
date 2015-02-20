@@ -1,0 +1,58 @@
+﻿<#@ template debug="true" hostspecific="true" language="C#" #>
+<#@ output extension=".js" #>
+<#@ include file="multi.output.tt" #>
+<#@ import namespace="System.ComponentModel" #>
+<#@ import namespace="System.Reflection" #>
+<#@ import namespace="System.Runtime.Remoting" #>
+<#@ assembly name="$(SolutionDir)neltic.web.test\bin\neltic.utility.dll" #>
+<#@ import namespace="neltic.utility.builder.javascript" #>
+<#
+StringBuilder allEntitiesJS = new StringBuilder();
+
+var assembly = "neltic.model";
+
+var entities = new string [] {
+		"Layer"
+	};
+
+var pk = new string [] {
+		"Id"
+	};
+
+for (int i = 0; i < entities.Length; i++)
+{
+	string fileName = "error.js";
+	StringBuilder entityJS = EntityController.Instance.Build(assembly, entities[i], pk[i], out fileName);
+    this.GenerationEnvironment = entityJS;
+	allEntitiesJS.Append(entityJS);
+	SaveOutput(fileName.ToLower());
+}
+
+assembly = "neltic.utility";
+
+entities = new string [] {
+		"AjaxResponse",
+		"ServiceResponse<bool>",
+		"KeyValue<int,string>"
+	};
+
+pk = new string [] {
+		"Id",
+		"Status",
+		"Key"
+	};
+
+for (int i = 0; i < entities.Length; i++)
+{
+	string fileName = "error.js";
+	StringBuilder entityJS = EntityController.Instance.Build(assembly, entities[i], pk[i], out fileName);
+    this.GenerationEnvironment = entityJS;
+	allEntitiesJS.Append(entityJS);
+	SaveOutput(fileName.ToLower());
+}
+
+// la primera vez hay que comentar esta linea, despues ya se debe dejar
+DeleteOldOutputs();
+
+this.GenerationEnvironment = allEntitiesJS;
+#>

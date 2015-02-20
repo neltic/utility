@@ -1,0 +1,18 @@
+﻿<#@ template debug="false" hostspecific="false" language="C#" #>
+<#@ assembly name="System.Core" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Text" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ assembly name="System.Xml" #>
+<#@ assembly name="System.Xml.Linq" #>
+<#@ import namespace="System.Xml.Linq" #>
+<#@ assembly name="System.Configuration" #>
+<#@ import namespace="System.Configuration" #>
+<#@ assembly name="$(SolutionDir)neltic.environ\bin\Debug\neltic.utility.dll" #>
+<#@ import namespace="neltic.utility.builder.csharp" #>
+<#@ output extension=".cs" #>
+<#
+EnvironController.Instance.SetExcludedConnectionStrings(new string[] { "LocalSqlServer", "LocalMySqlServer" });
+
+this.GenerationEnvironment = EnvironController.Instance.Build("neltic.environ", "Environ",@"C:\deloitte\mx\neltic.utilities\neltic.web.test\Web.config");
+#>
