@@ -1,5 +1,4 @@
-﻿"use strict";
-/*
+﻿/*
     by @neltic on 2015-01-01
     need Bootstrap & jQuery v1.10+
 
@@ -25,7 +24,7 @@ var alert = function (type, message, title, configuration) {
     if (typeof (title) === 'object') { configuration = title; title = null; }
     if (typeof (configuration) === 'object') { $.extend(config, configuration); }
     if (typeof (message) !== 'string') { message = ''; }
-    if (typeof (title) !== 'string') { title = message; message = ''; }
+    if (typeof (title) !== 'string') { var all = message.split('\n'); title = all.shift(); message = all.join('\n'); }
     // init dom
     var $holder = $('#' + config.id);
     if ($('#' + config.id).length === 0) {
